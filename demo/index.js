@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import querystring from 'querystring';
-import ReactSwipe from '../src/scrollLoop';
+import ScollLoop from '../src/scrollLoop';
 
 import './index.css';
 
@@ -42,9 +42,9 @@ class Page extends Component {
         <h1>ReactScrollLoop.js</h1>
         <h2>options: speed, auto, height, minSpeed</h2>
 
-        <ReactSwipe ref="reactSwipe" className="mySwipe" {...swipeOptions}>
+        <ScollLoop ref="reactSwipe" className="mySwipe" {...swipeOptions}>
             {paneNodes}
-        </ReactSwipe>
+        </ScollLoop>
 
         <div>
           <button type="button" onClick={()=>{this.updateSpeed(200)}}>speed+0.2s</button>

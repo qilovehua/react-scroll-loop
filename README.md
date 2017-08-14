@@ -2,7 +2,6 @@
 
 ## Demo
 
-with 3D
 <p>
 <img src="https://github.com/qilovehua/react-scroll-loop/blob/master/demo/scroll-loop.gif" width="500" />
 <p>
@@ -23,7 +22,7 @@ Scroll can take an optional second parameter– an object of key/value settings:
 
 - **transitionEnd** Function - runs at the end slide transition.
 
-## How to use
+## How to use demo
 
 ```bash
 git clone react-scroll-loop
