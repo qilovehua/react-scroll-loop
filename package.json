@@ -1,25 +1,22 @@
 {
-  "name": "react-swipe-plus",
+  "name": "react-scroll-loop",
   "version": "0.0.1",
-  "description": "forked from voronianski's react-swipe&swipe-js-iso, as a React component",
-  "homepage": "https://github.com/qilovehua/react-swipe-plus",
+  "description": "scroll from bottom to top by loop",
+  "homepage": "https://github.com/qilovehua/react-scroll-loop",
   "keywords": [
     "react",
-    "component",
-    "carousel",
-    "swipe",
-    "react-component"
+    "scroll",
+    "loop",
+    "swipe"
   ],
   "author": "qilovehua <lhq0631@163.com>",
   "contributors": [
-    "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
-    "Jed Schmidt <where@jed.is>"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/qilovehua/react-swipe-plus.git"
+    "url": "git://github.com/qilovehua/react-scroll-loop.git"
   },
-  "main": "dist/react-swipe.min.js",
+  "main": "dist/react-scroll-loop.min.js",
   "license": "MIT",
   "dependencies": {
   },
@@ -60,8 +57,7 @@
     "webpack-umd-external": "^1.0.2"
   },
   "scripts": {
-    "build": "npm run build-demo && npm run build-dist-dev && npm run build-dist-prod",
-    "build-dist-dev": "NODE_ENV=development webpack --config webpack.config --colors",
+    "build": "npm run build-demo && npm run build-dist-prod",
     "build-demo": "NODE_ENV=development webpack --config webpack.demo.config --colors",
     "build-dist-prod": "NODE_ENV=production webpack --config webpack.config --progress --colors -p",
     "lint": "eslint ./src",

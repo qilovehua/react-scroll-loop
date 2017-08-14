@@ -8,9 +8,7 @@ const webpackUMDExternal = require('webpack-umd-external');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const pluginsList = [];
-const outputFileName = env === 'production' ?
-  'react-swipe.min.js' :
-  'react-swipe.js';
+const outputFileName = env === 'production' ? 'react-scroll-loop.min.js' : 'react-scroll-loop.js';
 
 if (env === 'production') {
   pluginsList.push(

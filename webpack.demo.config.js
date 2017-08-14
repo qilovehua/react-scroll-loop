@@ -20,24 +20,10 @@ const config = {
     path: path.join(__dirname, 'demo'),
     filename: outputFileName
   },
-  //
-  // externals: webpackUMDExternal({
-  //   'react': 'React',
-  //   'swipe-js-iso': 'Swipe'
-  // }),
-  //
-  // resolve: {
-  //   extensions: ['', '.js', '.jsx']
-  // },
 
   plugins: pluginsList,
 
   module: {
-    // preLoaders: [{
-    //   test: /\.jsx?$/,
-    //   loaders: ['eslint'],
-    //   exclude: /node_modules/
-    // }],
 
     loaders: [{
       test: /\.jsx?$/,
