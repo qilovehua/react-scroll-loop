@@ -1,0 +1,17 @@
+.react-swipe-container {
+  overflow: hidden;
+}
+.swipe-wrap {
+  position: relative;
+}
+.swipe-wrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.itemWrap {
+  width: 100%;
+  position: absolute;
+  transition-timing-function: linear;
+  transitionProperty: top;
+}
