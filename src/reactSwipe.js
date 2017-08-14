@@ -18,7 +18,7 @@ class ReactSwipe extends Component {
   }
 
   render() {
-    const {height, id, className, children} = this.props;
+    const {height = 200, id, className, children} = this.props;
     var style = {height: height + 'px'};
 
     return (
