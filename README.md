@@ -4,14 +4,14 @@
 
 with 3D
 <p>
-<img src="https://github.com/qilovehua/react-scroll-loop/blob/master/demo/scroll-loop.gif" width="600" />
+<img src="https://github.com/qilovehua/react-scroll-loop/blob/master/demo/scroll-loop.gif" width="500" />
 <p>
-swipeOptions:
+scrollOptions:
 file:///Users/whoami/react-scroll-loop/demo/index.html?auto=1&height=230&minSpeed=10
 
 ## Config Options
 
-Swipe can take an optional second parameter– an object of key/value settings:
+Scroll can take an optional second parameter– an object of key/value settings:
 
 - **speed** Integer *(default:2000)* - speed of transitions in milliseconds.
 
