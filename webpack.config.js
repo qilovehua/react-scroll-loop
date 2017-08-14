@@ -6,11 +6,21 @@ const webpack = require('webpack');
 const path = require('path');
 const webpackUMDExternal = require('webpack-umd-external');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const pluginsList = [];
 const outputFileName = env === 'production' ? 'react-scroll-loop.min.js' : 'react-scroll-loop.js';
 
+var packPath = path.join(__dirname, 'dist');
+
 if (env === 'production') {
+  pluginsList.push(
+    new CleanWebpackPlugin(packPath, {
+      root: __dirname,
+      verbose: true,
+      dry: false
+    })
+  );
   pluginsList.push(
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
@@ -20,8 +30,8 @@ if (env === 'production') {
   pluginsList.push(
     new CopyWebpackPlugin([
       {
-        from: './src/reactSwipe.js',
-        to: './reactSwipe.js'
+        from: './src/scrollLoop.js',
+        to: './scrollLoop.js'
       },
       {
         from: './src/swipe.js',
@@ -32,12 +42,12 @@ if (env === 'production') {
 }
 
 const config = {
-  entry: path.join(__dirname, 'src/reactSwipe.js'),
+  entry: path.join(__dirname, 'src/scrollLoop.js'),
 
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: packPath,
     filename: outputFileName,
-    library: 'ReactSwipe',
+    library: 'ReactScrollLoop',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

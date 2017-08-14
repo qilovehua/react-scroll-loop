@@ -10,16 +10,14 @@
     "swipe"
   ],
   "author": "qilovehua <lhq0631@163.com>",
-  "contributors": [
-  ],
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "git://github.com/qilovehua/react-scroll-loop.git"
   },
   "main": "dist/react-scroll-loop.min.js",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^15.5.0"
   },
@@ -38,6 +36,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
     "chai": "^3.5.0",
+    "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",
     "enzyme": "^2.2.0",
@@ -57,9 +56,9 @@
     "webpack-umd-external": "^1.0.2"
   },
   "scripts": {
-    "build": "npm run build-demo && npm run build-dist-prod",
+    "build": "npm run build-demo && npm run build-prod",
     "build-demo": "NODE_ENV=development webpack --config webpack.demo.config --colors",
-    "build-dist-prod": "NODE_ENV=production webpack --config webpack.config --progress --colors -p",
+    "build-prod": "NODE_ENV=production webpack --config webpack.config --progress --colors -p",
     "lint": "eslint ./src",
     "lint-dev": "eslint --fix ./src",
     "test": "echo \"Comming soon ;)\" && exit 0"

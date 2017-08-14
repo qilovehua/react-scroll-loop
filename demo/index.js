@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import querystring from 'querystring';
-import ReactSwipe from '../src/reactSwipe';
+import ReactSwipe from '../src/scrollLoop';
 
 import './index.css';
 
@@ -39,9 +39,8 @@ class Page extends Component {
   render() {
     return (
       <div className="center">
-        <h1>ReactSwipe.js</h1>
-        <h2>Open this page from a mobile device (real or emulated).</h2>
-        <h2>You can pass <a href="https://github.com/voronianski/swipe-js-iso#config-options">Swipe.js options</a> as query params.</h2>
+        <h1>ReactScrollLoop.js</h1>
+        <h2>options: speed, auto, height, minSpeed</h2>
 
         <ReactSwipe ref="reactSwipe" className="mySwipe" {...swipeOptions}>
             {paneNodes}

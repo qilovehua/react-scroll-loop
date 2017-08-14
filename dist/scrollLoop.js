@@ -3,7 +3,7 @@ import Swipe from './swipe';
 
 import './style.css';
 
-class ReactSwipe extends Component {
+class ScollLoop extends Component {
 
   componentDidMount() {
     const {speed, minSpeed = 10, auto = 1, transitionEnd} = this.props;
@@ -40,7 +40,7 @@ class ReactSwipe extends Component {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  ReactSwipe.PropTypes = {
+  ScollLoop.PropTypes = {
     speed: PropTypes.number,
     auto: PropTypes.number,
     height: PropTypes.number.isRequired,
@@ -50,4 +50,4 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
-export default ReactSwipe;
+export default ScollLoop;
