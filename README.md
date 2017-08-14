@@ -15,7 +15,9 @@ Swipe can take an optional second parameter– an object of key/value settings:
 
 - **speed** Integer *(default:2000)* - speed of transitions in milliseconds.
 
-- **height** Integer *(default:230)* - container's style.height = height + 'px'.
+- **minSpeed** Integer *(default:10)* - min speed of transitions in milliseconds.
+
+- **height** Integer *(default:200, required)* - container's style.height = height + 'px'.
 
 - **auto** Integer - begin with auto scroll
 
