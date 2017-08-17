@@ -3,7 +3,7 @@ import Swipe from './swipe';
 
 import './style.css';
 
-class ScollLoop extends Component {
+class ScrollLoop extends Component {
 
   componentDidMount() {
     const {speed, minSpeed = 10, auto = 1, transitionEnd} = this.props;
@@ -18,11 +18,10 @@ class ScollLoop extends Component {
   }
 
   render() {
-    const {height = 200, id, className, children} = this.props;
-    var style = {height: height + 'px'};
+    const {height = 200, id, className, children, style} = this.props;
 
     return (
-        <div ref="container" id={id} className={`react-swipe-container ${className}`} style={style}>
+        <div ref="container" id={id} className={`react-swipe-container ${className}`} style={{height: height + 'px', ...style}}>
             <div className="swipe-wrap">
                 {React.Children.map(children, (child) => {
                   if (!child) {
@@ -40,7 +39,7 @@ class ScollLoop extends Component {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  ScollLoop.PropTypes = {
+  ScrollLoop.PropTypes = {
     speed: PropTypes.number,
     auto: PropTypes.number,
     height: PropTypes.number.isRequired,
@@ -50,4 +49,4 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
-export default ScollLoop;
+export default ScrollLoop;

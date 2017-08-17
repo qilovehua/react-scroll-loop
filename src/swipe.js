@@ -176,7 +176,13 @@
         // stop auto scroll
         stop();
       },
-      updateSpeed: function (msec) {
+      updateSpeed: function (msec, set = false) {
+        if (set) {
+          slideSpeed = msec > minSpeed ? msec : minSpeed;
+          console.log('==update speed==', slideSpeed);
+
+          return;
+        }
         if (!slideSpeed) {
           slideSpeed = speed;
         }

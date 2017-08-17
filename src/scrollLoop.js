@@ -18,11 +18,10 @@ class ScrollLoop extends Component {
   }
 
   render() {
-    const {height = 200, id, className, children} = this.props;
-    var style = {height: height + 'px'};
+    const {height = 200, id, className, children, style} = this.props;
 
     return (
-        <div ref="container" id={id} className={`react-swipe-container ${className}`} style={style}>
+        <div ref="container" id={id} className={`react-swipe-container ${className}`} style={{height: height + 'px', ...style}}>
             <div className="swipe-wrap">
                 {React.Children.map(children, (child) => {
                   if (!child) {
