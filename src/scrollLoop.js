@@ -18,7 +18,7 @@ class ScrollLoop extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.length != this.props.children.length) {
+    if (nextProps.children.length != this.props.children.length) {
       this.reset = true;
     }
   }
@@ -26,7 +26,10 @@ class ScrollLoop extends Component {
   componentDidUpdate() {
     if (this.reset) {
       this.reset = false;
-      this.swipe && this.swipe.setup();
+      if (this.swipe) {
+        this.swipe.setup();
+        this.swipe.begin(this.props.auto);
+      }
     }
   }
 

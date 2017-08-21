@@ -34,6 +34,7 @@
     var speed = options.speed || 2000;
     var minSpeed = options.minSpeed || 20;
     var height = options.height || 0;
+    var delay = options.auto || 0;
 
     function setup() {
       // cache slides
@@ -48,7 +49,6 @@
 
       // stack elements
       var pos = slides.length;
-      console.log('something is wrong');
 
       while (pos--) {
         var slide = slides[pos];
@@ -65,6 +65,7 @@
       }
 
       container.style.visibility = 'visible';
+      console.log('==loop==', options);
     }
 
     function next() {
@@ -104,12 +105,12 @@
     }
 
     // setup auto slideshow
-    var delay = options.auto || 0;
     var interval;
 
     function begin() {
       clearTimeout(interval);
       interval = setTimeout(next, delay);
+      console.log('==begin==', delay);
     }
 
     function stop() {
@@ -171,9 +172,9 @@
       setup: function () {
         setup();
       },
-      begin: function () {
-        delay = options.auto || 0;
-        begin();
+      begin: function (auto) {
+        delay = auto === undefined ? (options.auto || 0) : auto;
+        delay && begin();
       },
       stop: function () {
         // stop auto scroll

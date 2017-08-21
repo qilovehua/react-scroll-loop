@@ -34,6 +34,7 @@
     var speed = options.speed || 2000;
     var minSpeed = options.minSpeed || 20;
     var height = options.height || 0;
+    var delay = options.auto || 0;
 
     function setup() {
       // cache slides
@@ -103,7 +104,6 @@
     }
 
     // setup auto slideshow
-    var delay = options.auto || 0;
     var interval;
 
     function begin() {
@@ -170,9 +170,9 @@
       setup: function () {
         setup();
       },
-      begin: function () {
-        delay = options.auto || 0;
-        begin();
+      begin: function (auto) {
+        delay = auto === undefined ? (options.auto || 0) : auto;
+        delay && begin();
       },
       stop: function () {
         // stop auto scroll
