@@ -65,7 +65,6 @@
       }
 
       container.style.visibility = 'visible';
-      console.log('==loop==', options);
     }
 
     function next() {
@@ -110,7 +109,6 @@
     function begin() {
       clearTimeout(interval);
       interval = setTimeout(next, delay);
-      console.log('==begin==', delay);
     }
 
     function stop() {
