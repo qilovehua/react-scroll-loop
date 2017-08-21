@@ -37,6 +37,8 @@
 
     function setup() {
       // cache slides
+      index = 0;
+      slideSpeed = 0;
       slides = element.children;
 
       // determine width of each slide

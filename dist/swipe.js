@@ -37,6 +37,8 @@
 
     function setup() {
       // cache slides
+      index = 0;
+      slideSpeed = 0;
       slides = element.children;
 
       // determine width of each slide
@@ -46,6 +48,7 @@
 
       // stack elements
       var pos = slides.length;
+      console.log('something is wrong');
 
       while (pos--) {
         var slide = slides[pos];

@@ -5,11 +5,29 @@ import './style.css';
 
 class ScrollLoop extends Component {
 
+  constructor(props) {
+    super(props);
+    this.reset = false;
+  }
+
   componentDidMount() {
     const {speed, minSpeed = 10, auto = 1, transitionEnd} = this.props;
     var swipeOptions = {speed, minSpeed, transitionEnd, auto};
 
     this.swipe = Swipe(this.refs.container, swipeOptions);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.length != this.props.children.length) {
+      this.reset = true;
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.reset) {
+      this.reset = false;
+      this.swipe && this.swipe.setup();
+    }
   }
 
   componentWillUnmount() {
