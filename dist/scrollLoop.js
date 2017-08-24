@@ -53,6 +53,17 @@ class ScrollLoop extends Component {
 
                   return React.cloneElement(child, {style: childStyle});
                 })}
+                {
+                  children && children.length === 2 && React.Children.map(children, (child) => {
+                    if (!child) {
+                      return null;
+                    }
+
+                    const childStyle = child.props.style ? child.props.style : {};
+
+                    return React.cloneElement(child, {style: childStyle});
+                  })
+                }
             </div>
         </div>
     );
