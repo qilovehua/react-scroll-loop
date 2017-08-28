@@ -100,7 +100,9 @@
       style.msTransitionDuration = speed + 'ms';
       style.OTransitionDuration = speed + 'ms';
       style.transitionDuration = speed + 'ms';
-      style.top = dist + 'px';
+      style.webkitTransform = 'translate3d(0, ' + dist + 'px, 0)';
+      // style.webkitTransform = 'translate3d(0, ' + dist + ' px, 0)';
+      // style.top = dist + 'px';
     }
 
     // setup auto slideshow
@@ -133,7 +135,8 @@
         if (parseInt(event.target.getAttribute('data-index'), 10) == circle(index + 1)) {
           var prev = element.children[0];
 
-          prev.style.top = height + 'px';
+          // prev.style.top = height + 'px';
+          prev.style.webkitTransform = 'translate3d(0, ' + height + 'px, 0';
           element.append(prev);
           index = circle(index + 1);
           if (delay) {
@@ -200,7 +203,8 @@
         stop();
         // reset element
         element.style.height = '';
-        element.style.top = '';
+        // element.style.top = '';
+        element.style.webkitTransform = '';
         slideSpeed = 0;
         // reset slides
         var pos = slides.length;
@@ -210,9 +214,10 @@
 
           slide.style.height = '';
           slide.style.top = '';
-          if (browser.transitions) {
-            translate(pos, 0, 0);
-          }
+          slide.style.webkitTransform = '';
+          // if (browser.transitions) {
+          //   translate(pos, 0, 0);
+          // }
         }
         // removed event listeners
         if (browser.addEventListener) {

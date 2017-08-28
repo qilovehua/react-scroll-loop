@@ -13,5 +13,5 @@
   width: 100%;
   position: absolute;
   transition-timing-function: linear;
-  transitionProperty: top;
+  transitionProperty: transform;
 }
