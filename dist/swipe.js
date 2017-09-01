@@ -65,7 +65,6 @@
       }
 
       container.style.visibility = 'visible';
-      console.log('===setup===', height);
     }
 
     function next() {
@@ -122,7 +121,6 @@
     // setup event capturing
     var events = {
       handleEvent: function (event) {
-        console.log('==event==', event.type);
         switch (event.type) {
           case 'webkitTransitionEnd':
           case 'msTransitionEnd':
