@@ -27,6 +27,7 @@ class ScrollLoop extends Component {
     if (this.reset) {
       this.reset = false;
       if (this.swipe) {
+        this.swipe.stop();
         this.swipe.setup();
         this.swipe.begin(this.props.auto);
       }
