@@ -65,6 +65,7 @@
       }
 
       container.style.visibility = 'visible';
+      console.log('===setup===', height);
     }
 
     function next() {
@@ -121,13 +122,18 @@
     // setup event capturing
     var events = {
       handleEvent: function (event) {
+        console.log('==event==', event.type);
         switch (event.type) {
           case 'webkitTransitionEnd':
           case 'msTransitionEnd':
           case 'oTransitionEnd':
           case 'otransitionend':
           case 'transitionend': offloadFn(this.transitionEnd(event)); break;
-          case 'resize': offloadFn(setup); break;
+          case 'resize': offloadFn(function () {
+            // stop();
+            setup();
+            delay && begin();
+          }); break;
           default: break;
         }
       },
