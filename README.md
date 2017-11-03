@@ -3,9 +3,6 @@
 ## Demo
 [See Demo from Mobile](https://qilovehua.github.io/react-scroll-loop/demo/index.html?auto=1&height=230&minSpeed=10)
 
-<p>
-<img src="https://github.com/qilovehua/react-scroll-loop/blob/master/demo/scroll-loop.gif" width="500" />
-<p>
 scrollOptions:
 file:///Users/whoami/react-scroll-loop/demo/index.html?auto=1&height=230&minSpeed=10
 
